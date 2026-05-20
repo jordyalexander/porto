@@ -9,59 +9,69 @@ const projects = [
   {
     title: "NexaStore",
     subtitle: "Game Top Up Website",
-    description: "A responsive game top-up website focused on clean UI and secure transaction flow.",
+    description:
+      "A responsive and modern game top-up platform designed with a clean user interface and smooth user experience. The system focuses on fast navigation, secure transaction flow, and optimized layout for both desktop and mobile users.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "#",
-    demo: "#",
   },
   {
     title: "FlickTicketPro",
     subtitle: "Movie Ticket Booking App",
-    description: "A full-stack movie ticket booking platform with movie schedules and ticket booking features.",
+    description:
+      "A full-stack movie ticket booking platform that allows users to browse movies, check schedules, and book tickets seamlessly. Built with a focus on usability, dynamic content management, and responsive UI for an enhanced booking experience.",
     tech: ["Laravel", "Tailwind CSS", "JavaScript"],
-    github: "#",
-    demo: "#",
   },
   {
     title: "Student Data Management",
     subtitle: "Desktop Application",
-    description: "CRUD-based student management application integrated with relational database systems.",
+    description:
+      "A CRUD-based desktop application for managing student data efficiently, integrated with a relational database system. It supports data creation, reading, updating, and deletion with structured data handling and simple interface design.",
     tech: ["Java", "MySQL"],
-    github: "#",
-    demo: "#",
   },
   {
     title: "Calcify",
     subtitle: "Calculator App",
-    description: "A mobile calculator application with responsive interactions and clean UI.",
+    description:
+      "A lightweight and responsive mobile calculator application featuring clean UI design and smooth interaction. Built to provide fast calculations with an intuitive user experience suitable for daily use.",
     tech: ["Java", "Kotlin"],
-    github: "#",
-    demo: "#",
   },
   {
     title: "SecureAuth",
     subtitle: "Registration App",
-    description: "A mobile registration application with form validation and authentication features.",
+    description:
+      "A secure mobile registration application with form validation, authentication flow, and structured input handling. Designed to ensure user data integrity and a smooth onboarding experience.",
     tech: ["Java", "Kotlin"],
-    github: "#",
-    demo: "#",
   },
   {
     title: "NoteSphere",
     subtitle: "Notes App",
-    description: "A note-taking mobile application focused on efficient data storage and user-friendly experience.",
+    description:
+      "A simple yet efficient note-taking mobile application focused on fast note creation, editing, and storage. Designed with user-friendly navigation and optimized for daily productivity.",
     tech: ["Java", "Kotlin"],
-    github: "#",
-    demo: "#",
   },
   {
-    title: "Rinso Website Clone",
-    subtitle: "Frontend Project",
-    description: "A front-end clone project focused on responsive layouts and modern styling techniques.",
-    tech: ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
-    github: "#",
-    demo: "#",
-  },
+  title: "Rinso Website Clone",
+  subtitle: "Frontend Project",
+  description:
+    "A modern front-end website clone inspired by the official Rinso website, developed to improve responsive web design skills and modern UI/UX implementation. This project focuses on creating a clean, interactive, and fully responsive user interface using contemporary styling frameworks and layout techniques. The website includes responsive navigation, promotional sections, product showcases, smooth user interactions, and optimized visual components to deliver a professional and engaging user experience across desktop, tablet, and mobile devices.",
+  tech: ["HTML", "CSS", "Bootstrap", "Tailwind CSS"],
+},
+  {
+  title: "IoT-Based Food Stock Monitoring System",
+  subtitle: "IoT & Embedded System Project",
+  description:
+    "An intelligent food stock monitoring and control system using Load Cell sensors, DHT22, and Mini Dehumidifier integrated with IoT technology, database systems, and automatic Telegram notifications for real-time monitoring and environmental control.",
+  tech: [
+    "Arduino",
+    "ESP32",
+    "IoT",
+    "Load Cell",
+    "DHT22",
+    "Telegram Bot",
+    "Firebase",
+    "MySQL",
+    "C++",
+  ],
+},
 ]
 
 export function ProjectsSection() {
@@ -156,24 +166,6 @@ export function ProjectsSection() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="flex gap-3 mt-auto">
-                    <a
-                      href={project.github}
-                      className="flex items-center gap-2 px-4 py-2 glass-card rounded-lg text-sm font-medium text-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
-                      aria-label="View GitHub repository"
-                    >
-                      <FiGithub size={16} />
-                      GitHub
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="flex items-center gap-2 px-4 py-2 glass-card rounded-lg text-sm font-medium text-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
-                      aria-label="View live demo"
-                    >
-                      <FiExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </div>
                 </div>
               </div>
             </motion.div>

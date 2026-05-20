@@ -2,8 +2,14 @@
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiDownload, FiArrowRight } from "react-icons/fi"
-import Link from "next/link"
+import {
+  FiGithub,
+  FiLinkedin,
+  FiInstagram,
+  FiMail,
+  FiDownload,
+  FiArrowRight,
+} from "react-icons/fi"
 
 const roles = [
   "Web Developer",
@@ -19,6 +25,7 @@ export function HeroSection() {
 
   useEffect(() => {
     const role = roles[currentRole]
+
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (displayText.length < role.length) {
@@ -40,17 +47,37 @@ export function HeroSection() {
   }, [displayText, isDeleting, currentRole])
 
   const socialLinks = [
-    { icon: FiGithub, href: "https://github.com/jordyalexanderbarus", label: "GitHub" },
-    { icon: FiLinkedin, href: "https://linkedin.com/in/jordyalexanderbarus", label: "LinkedIn" },
-    { icon: FiInstagram, href: "https://instagram.com/jordyalexanderbarus", label: "Instagram" },
-    { icon: FiMail, href: "mailto:jordyalexanderbarus@gmail.com", label: "Email" },
+    {
+      icon: FiGithub,
+      href: "https://github.com/jordyalexander",
+      label: "GitHub",
+    },
+    {
+      icon: FiLinkedin,
+      href: "https://id.linkedin.com/in/jordy-alexander-barus-153b42364",
+      label: "LinkedIn",
+    },
+    {
+      icon: FiInstagram,
+      href: "https://instagram.com/joalbar_",
+      label: "Instagram",
+    },
+    {
+      icon: FiMail,
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=jordyalexanderbarus@gmail.com",
+      label: "Email",
+    },
   ]
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
       {/* Background gradient orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -77,7 +104,9 @@ export function HeroSection() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance"
             >
               {"Hi, I'm "}
-              <span className="text-gradient">Jordy Alexander Barus</span>
+              <span className="text-gradient">
+                Jordy Alexander Barus
+              </span>
             </motion.h1>
 
             <motion.div
@@ -86,8 +115,13 @@ export function HeroSection() {
               transition={{ delay: 0.4 }}
               className="text-xl sm:text-2xl text-muted-foreground mb-6 h-8"
             >
-              <span className="text-foreground">{displayText}</span>
-              <span className="animate-pulse text-primary">|</span>
+              <span className="text-foreground">
+                {displayText}
+              </span>
+
+              <span className="animate-pulse text-primary">
+                |
+              </span>
             </motion.div>
 
             <motion.p
@@ -96,9 +130,11 @@ export function HeroSection() {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              I am an Informatics Engineering student passionate about web development, 
-              mobile applications, and network systems. I enjoy building modern digital 
-              solutions and continuously improving my technical skills to grow in the IT industry.
+              I am an Informatics Engineering student passionate
+              about web development, mobile applications, and
+              network systems. I enjoy building modern digital
+              solutions and continuously improving my technical
+              skills to grow in the IT industry.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -106,19 +142,22 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 relative z-50"
             >
-              <Link
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-all duration-200 glow-cyan"
+              <a
+                href="https://wa.me/6285260778001?text=Hello%20Jordy%2C%20I%20am%20interested%20in%20hiring%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:opacity-90 transition-all duration-200 glow-cyan cursor-pointer relative z-50"
               >
                 Contact Me
                 <FiArrowRight />
-              </Link>
+              </a>
+
               <a
-                href="/cv.pdf"
+                href="/CV Jordy Alexander.pdf"
                 download
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 glass-card text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 glass-card text-foreground font-medium rounded-lg hover:bg-secondary/50 transition-all duration-200 relative z-50"
               >
                 <FiDownload />
                 Download CV
@@ -130,7 +169,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex gap-4 justify-center lg:justify-start"
+              className="flex gap-4 justify-center lg:justify-start relative z-50"
             >
               {socialLinks.map((social) => (
                 <a
@@ -154,33 +193,54 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="relative">
-              {/* Animated gradient border */}
-              <div className="absolute -inset-1 gradient-border rounded-full opacity-75 blur-sm" />
-              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden glass-card p-1">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-6xl sm:text-7xl font-bold text-gradient">JAB</span>
-                </div>
+            <div className="relative group">
+              {/* Gradient Glow */}
+              <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 opacity-70 blur-2xl group-hover:opacity-100 transition duration-500" />
+
+              {/* Profile Image */}
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border border-white/10 shadow-2xl">
+                <img
+                  src="/profile.png"
+                  alt="Jordy Alexander Barus"
+                  className="w-full h-full object-cover object-[center_15%] rounded-full"
+                />
               </div>
-              {/* Floating elements */}
+
+              {/* Floating Icons */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -right-4 w-12 h-12 glass-card rounded-lg flex items-center justify-center"
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="absolute -top-4 -right-4 w-12 h-12 glass-card rounded-xl flex items-center justify-center border border-white/10"
               >
                 <span className="text-xl">💻</span>
               </motion.div>
+
               <motion.div
                 animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -bottom-4 -left-4 w-12 h-12 glass-card rounded-lg flex items-center justify-center"
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
+                className="absolute -bottom-4 -left-4 w-12 h-12 glass-card rounded-xl flex items-center justify-center border border-white/10"
               >
                 <span className="text-xl">📱</span>
               </motion.div>
+
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute top-1/2 -left-8 w-12 h-12 glass-card rounded-lg flex items-center justify-center"
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="absolute top-1/2 -left-8 w-12 h-12 glass-card rounded-xl flex items-center justify-center border border-white/10"
               >
                 <span className="text-xl">🌐</span>
               </motion.div>
@@ -197,7 +257,10 @@ export function HeroSection() {
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+            }}
             className="w-6 h-10 rounded-full border-2 border-muted-foreground/50 flex justify-center pt-2"
           >
             <motion.div className="w-1.5 h-1.5 rounded-full bg-primary" />

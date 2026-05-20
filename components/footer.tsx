@@ -13,10 +13,10 @@ const navLinks = [
 ]
 
 const socialLinks = [
-  { icon: FiGithub, href: "https://github.com/jordyalexanderbarus", label: "GitHub" },
-  { icon: FiLinkedin, href: "https://linkedin.com/in/jordyalexanderbarus", label: "LinkedIn" },
-  { icon: FiInstagram, href: "https://instagram.com/jordyalexanderbarus", label: "Instagram" },
-  { icon: FiMail, href: "mailto:jordyalexanderbarus@gmail.com", label: "Email" },
+  { icon: FiGithub, href: "https://github.com/jordyalexander", label: "GitHub" },
+  { icon: FiLinkedin, href: "https://id.linkedin.com/in/jordy-alexander-barus-153b42364", label: "LinkedIn" },
+  { icon: FiInstagram, href: "https://instagram.com/joalbar_", label: "Instagram" },
+  { icon: FiMail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=jordyalexanderbarus@gmail.com", label: "Email" },
 ]
 
 export function Footer() {
@@ -76,17 +76,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            © {currentYear} Jordy Alexander Barus. Made with{" "}
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-            >
-              <FiHeart className="w-4 h-4 text-red-500 inline" />
-            </motion.span>
-          </p>
-
-          <p className="text-muted-foreground text-sm">
-            Built with Next.js & Tailwind CSS
+            © {currentYear} Jordy Alexander Barus.
           </p>
         </div>
       </div>
